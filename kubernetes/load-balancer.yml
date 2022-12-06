@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blobcity
+spec:
+  type: LoadBalancer
+  selector:
+    service: blobcity
+  ports:
+    - port: 10113
+      targetPort: 10113
+  loadBalancerIP: 34.118.65.223

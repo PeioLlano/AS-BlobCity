@@ -1,0 +1,8 @@
+root
+passwordHere
+create-ds AS_Trabajo_Individual
+create-collection AS_Trabajo_Individual.Students
+insert into AS_Trabajo_Individual.Students JSON
+{"name": "andoni", "mark": 10}
+exit
+exit

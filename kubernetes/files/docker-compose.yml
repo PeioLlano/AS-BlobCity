@@ -1,0 +1,10 @@
+services:
+  cliente_blobcity_kub:
+    container_name: clienteBlobcity-kub
+    build: .
+    restart: on-failure
+    volumes:
+      - /data:/data
+
+volumes:
+  blobcity_data:

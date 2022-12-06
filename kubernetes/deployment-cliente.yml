@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  labels:
+    service: cliente
+  name: cliente
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      service: cliente
+
+  template:
+    metadata:
+      labels:
+        service: cliente
+
+    spec:
+      restartPolicy: Always
+      containers:
+        - image: peiollano/as-cliente-blobcity-kub
+          name: cliente
+          ports:
+            - containerPort: 8000

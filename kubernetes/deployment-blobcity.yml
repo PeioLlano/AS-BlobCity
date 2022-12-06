@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  labels:
+    service: blobcity
+  name: blobcity
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      service: blobcity
+
+  template:
+    metadata:
+      labels:
+        service: blobcity
+
+    spec:
+      restartPolicy: Always
+      containers:
+        - image: blobcity/db
+          name: blobcity
+          ports:
+            - containerPort: 10111
+            - containerPort: 10113
+          volumeMounts:
+            - name: blob-vm
+              mountPath: /data
+
+      volumes:
+        - name: blob-vm
+          persistentVolumeClaim:
+            claimName: blobcity-pvc

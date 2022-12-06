@@ -1,0 +1,21 @@
+services:
+  blobcity:
+    container_name: blobcity
+    image: blobcity/db
+    ports:
+      - 10111:10111
+      - 10113:10113
+    volumes:
+      - ./blobcity_data:/data
+
+  cliente_blobcity:
+    container_name: clienteBlobcity
+    image: peiollano/as-cliente-blobcity
+    restart: on-failure
+    links:
+      - blobcity
+    volumes:
+      - ./blobcity_data:/data
+
+volumes:
+  blobcity_data:

@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  labels:
+    service: blobcity
+  name: blobcity
+
+spec:
+  type: ClusterIP
+  selector:
+    service: blobcity
+  ports:
+  - port: 10111
+    targetPort: 10111
+    name: blob-rest
+  - port: 10113
+    targetPort: 10113
+    name: blob-cli
