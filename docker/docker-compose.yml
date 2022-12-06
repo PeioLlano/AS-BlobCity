@@ -11,6 +11,7 @@ services:
   cliente_blobcity:
     container_name: clienteBlobcity
     image: peiollano/as-cliente-blobcity
+    #build: .
     restart: on-failure
     links:
       - blobcity

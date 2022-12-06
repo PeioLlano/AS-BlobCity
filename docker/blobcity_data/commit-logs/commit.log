@@ -1,6 +1,0 @@
-1670357227912|{"q":"CREATE-DS","fnid":"default","rid":"7070b532-a0dc-4837-a3d9-19236284aa1d","ds":"AS_Trabajo_Individual","mnid":"default"}
-1670357227920|{"q":"SCS","fnid":"default","ack":"0","rid":"7070b532-a0dc-4837-a3d9-19236284aa1d","ec":"DATASTORE_ALREADY_EXISTS"}
-1670357227926|{"q":"RS","ack":"1","rid":"7070b532-a0dc-4837-a3d9-19236284aa1d"}
-1670357227937|{"q":"CREATE-COLLECTION","c":"Students","fnid":"default","replication-type":"distributed","s-type":"on-disk","replication-factor":0,"rid":"b06a03c3-efbf-413d-86fb-c557e8c279d6","ds":"AS_Trabajo_Individual","mnid":"default"}
-1670357227945|{"q":"SCS","fnid":"default","ack":"0","rid":"b06a03c3-efbf-413d-86fb-c557e8c279d6","ec":"DUPLICATE_COLLECTION_NAME"}
-1670357227948|{"q":"RS","ack":"1","rid":"b06a03c3-efbf-413d-86fb-c557e8c279d6"}

@@ -3,6 +3,7 @@ sleep 2
 
 echo "Consiguiendo credenciales..."
 pass=$(cat /data/root-pass.txt)
+echo "Password: "$pass
 echo " "
 
 echo "Actualizando fichero de comandos..."
